@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextLabelDefault"></style>
+
+    <style name="TextInputDefault"></style>
+
+    <style name="ButtonPrimary"></style>
+
+    <style name="TextDefault"></style>
+</resources>
