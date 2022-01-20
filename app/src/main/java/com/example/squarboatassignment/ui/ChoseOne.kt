@@ -10,8 +10,6 @@ class ChoseOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chose_one)
-         finish()
-        val activity  = Intent(this, MainActivity::class.java)
-        startActivity(activity)
+
     }
 }
