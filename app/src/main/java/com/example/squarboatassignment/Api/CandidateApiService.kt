@@ -26,10 +26,10 @@ interface CandidateApiService {
         @Body resetPassword : com.example.squarboatassignment.data.models.Candidate.ForgetPassword.Data
     )
 
-    @POST("candidates/jobs")
-    suspend fun Applytojob(
-        @Body applyforjob : com.example.squarboatassignment.data.models.Candidate.ApplyToJobs.Data
-    )
+    @GET("candidates/jobs")
+    suspend fun getavailableJobs(
+    ):    com.example.squarboatassignment.data.models.Candidate.AvailableJobs.availableJobs
+
 
 
     @POST("candidates/jobs")

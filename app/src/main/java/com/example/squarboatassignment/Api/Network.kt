@@ -3,7 +3,7 @@ package com.example.squarboatassignment.Api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class Network {
+object Network {
     private  val BASE_URL=" https://jobs-api.squareboat.info/api/v1/"
 
     fun getInstance(): Retrofit {
