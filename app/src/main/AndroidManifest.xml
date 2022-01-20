@@ -12,6 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SquarBoatAssignment">
         <activity
+            android:name=".ui.RecruiterUi.PostJobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RecruiterUi.RecruiterForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RecruiterUi.RecruiterLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CandidateUi.AppliedJobList"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CandidateUi.AlreadyApliedJobs"
+            android:exported="false"
+            android:label="@string/title_activity_already_aplied_jobs"
+            android:theme="@style/Theme.SquarBoatAssignment.NoActionBar" />
+        <activity
+            android:name=".ui.CandidateUi.AvailableJobDetailApply"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CandidateUi.AvailableJobs"
+            android:exported="false" />
+        <activity
             android:name=".ui.CandidateUi.ForgetPassword"
             android:exported="false" />
         <activity
