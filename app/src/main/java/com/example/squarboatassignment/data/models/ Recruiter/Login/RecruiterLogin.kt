@@ -7,7 +7,7 @@ data class RecruiterLogin(
     @SerializedName("code")
     val code: Int,
     @SerializedName("data")
-    val `data`: Data,
+    val `data`: LoginData,
     @SerializedName("success")
     val success: Boolean
 )

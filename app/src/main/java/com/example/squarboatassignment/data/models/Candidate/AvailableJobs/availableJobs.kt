@@ -7,7 +7,7 @@ data class availableJobs(
     @SerializedName("code")
     val code: Int,
     @SerializedName("data")
-    val `data`: List<Data>,
+    val `data`: List<AvailableJobData>,
     @SerializedName("metadata")
     val metadata: Metadata,
     @SerializedName("success")

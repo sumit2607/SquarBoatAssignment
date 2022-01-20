@@ -7,7 +7,7 @@ data class RecruiterSignup(
     @SerializedName("code")
     val code: Int,
     @SerializedName("data")
-    val `data`: Data,
+    val `data`: SignUpData,
     @SerializedName("success")
     val success: Boolean
 )

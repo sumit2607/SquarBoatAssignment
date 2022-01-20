@@ -7,7 +7,7 @@ data class PostJob(
     @SerializedName("code")
     val code: Int,
     @SerializedName("data")
-    val `data`: Data,
+    val `data`: PostJobData,
     @SerializedName("success")
     val success: Boolean
 )

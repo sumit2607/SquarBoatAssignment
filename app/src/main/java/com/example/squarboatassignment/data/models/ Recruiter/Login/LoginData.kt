@@ -1,9 +1,9 @@
-package com.example.squarboatassignment.data.models. Recruiter.signup
+package com.example.squarboatassignment.data.models. Recruiter.Login
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class LoginData(
     @SerializedName("createdAt")
     val createdAt: String,
     @SerializedName("email")

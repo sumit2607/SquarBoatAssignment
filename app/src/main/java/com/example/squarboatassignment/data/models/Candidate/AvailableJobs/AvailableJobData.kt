@@ -1,9 +1,9 @@
-package com.example.squarboatassignment.data.models. Recruiter.PostJob
+package com.example.squarboatassignment.data.models.Candidate.AvailableJobs
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class AvailableJobData(
     @SerializedName("createdAt")
     val createdAt: String,
     @SerializedName("description")
