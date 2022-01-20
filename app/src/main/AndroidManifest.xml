@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SquarBoatAssignment">
         <activity
+            android:name=".ui.CandidateUi.ForgetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CandidateUi.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CandidateUi.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ChoseOne"
             android:exported="true">
             <intent-filter>
