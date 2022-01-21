@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
+    android:background="@drawable/button_gradient"
     tools:context=".ui.RecruiterUi.RecruiterLoginActivity">
 
     <FrameLayout
@@ -16,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/good_morning_img" />
+            />
 
         <Button
             android:id="@+id/button5"
@@ -84,7 +85,7 @@
         android:layout_marginTop="4dp"
 
         android:gravity="center"
-        android:text="Military style coding school"
+        android:text="Assigment By SquaerBoat"
         android:textColor="#9affffff"
         android:textSize="14sp"
         tools:ignore="SmallSp" />

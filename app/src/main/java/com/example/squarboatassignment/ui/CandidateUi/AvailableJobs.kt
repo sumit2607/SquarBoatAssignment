@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.squarboatassignment.Adapter.AllJobAdapter
@@ -27,14 +28,12 @@ class AvailableJobs : AppCompatActivity() {
         setContentView(R.layout.activity_available_jobs)
 
 
-        val api = Network.getInstance().create(apiService::class.java)
-        myRepo = myRepo(api)
+
+        myRepo = myRepo()
         factory = myViewModelFactory(myRepo)
-        myviewModel = ViewModelProvider(this, factory).get(myViewModel::class.java)
-        myviewModel.get().observe(this, Observer {
-            dataList = it as ArrayList<AvailableJobData>
-            setRecycle()
-        })
+        myviewModel = ViewModelProviders.of(this, factory).get(myViewModel::class.java)
+        dataList.addAll(myviewModel.get())
+        setRecycle()
     }
 
     private fun setRecycle() {

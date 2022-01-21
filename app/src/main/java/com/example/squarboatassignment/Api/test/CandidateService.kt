@@ -2,6 +2,7 @@ package com.example.squarboatassignment.Api.test
 
 import com.example.squarboatassignment.Api.CandidateApiService
 import com.example.squarboatassignment.data.models.Candidate.AvailableJobs.availableJobs
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -9,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 object CandidateService {
-    private  val BASE_URL=" https://jobs-api.squareboat.info/api/v1/"
+    private  val BASE_URL="https://jobs-api.squareboat.info/api/v1/"
 
 
     fun getRetrofit(): Retrofit {
@@ -21,7 +22,9 @@ object CandidateService {
 
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
+            .client(OkHttpClient())
+            .addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(
+                RxJava2CallAdapterFactory.create())
             .build()
 
 
