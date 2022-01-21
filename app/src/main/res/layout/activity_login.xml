@@ -18,6 +18,12 @@
             android:scaleType="centerCrop"
             android:src="@drawable/good_morning_img" />
 
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
 
     </FrameLayout>
 
@@ -39,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Masai "
+                android:text="Candidate "
                 android:textColor="#ffffff"
                 android:textSize="32sp" />
 
@@ -55,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="School"
+                android:text="Login"
                 android:textColor="#ffffff"
                 android:textSize="32sp" />
 
@@ -159,7 +165,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/TvSignUp"
+            android:id="@+id/TvSignUp2"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -9,18 +9,17 @@ import com.example.squarboatassignment.data.models.Candidate.AvailableJobs.Avail
 
 class AllJobAdapter(private val list :  List<AvailableJobData>, val context: Context) : RecyclerView.Adapter<AllJobsViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllJobsViewHolder {
-        val view= LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
         return AllJobsViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: AllJobsViewHolder, position: Int) {
-        val availableJobshere = list[position]
-        holder.setData(availableJobshere)
+        val textItem = list[position]
+        holder.setData(textItem)
     }
 
     override fun getItemCount(): Int {
-       return list.size
+        return list.size
     }
 }

@@ -1,9 +1,11 @@
 package com.example.squarboatassignment.Api
 
 import com.example.squarboatassignment.data.models.Candidate.AvailableJobs.AvailableJobData
-import com.example.squarboatassignment.data.models.Recruiter.Login.LoginData
-import com.example.squarboatassignment.data.models.Recruiter.passwordChange.Data
-import com.example.squarboatassignment.data.models.Recruiter.signup.SignUpData
+import com.example.squarboatassignment.data.models.Candidate.AvailableJobs.availableJobs
+import com.example.squarboatassignment.data.models.Candidate.Login.Login
+import com.example.squarboatassignment.data.models.Candidate.Signup.NewSignUpUser
+import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -12,13 +14,13 @@ interface CandidateApiService {
 
     @POST("auth/register")
     suspend fun signUp(
-        @Body signup : com.example.squarboatassignment.data.models.Candidate.Signup.Data
-    )
+        @Body signup: NewSignUpUser
+    ) : Call<com.example.squarboatassignment.data.models.Candidate.Signup.NewSignUpUser>
 
     @POST("auth/login")
     suspend fun login(
-        @Body Login : com.example.squarboatassignment.data.models.Candidate.Login.Data
-    )
+        @Body Login : com.example.squarboatassignment.data.models.Candidate.Login.Login
+    ) : Call<Login>
 
 
     @POST("auth/resetpassword")
@@ -26,9 +28,8 @@ interface CandidateApiService {
         @Body resetPassword : com.example.squarboatassignment.data.models.Candidate.ForgetPassword.Data
     )
 
-    @GET("candidates/jobs")
-    suspend fun getavailableJobs(
-    ):    com.example.squarboatassignment.data.models.Candidate.AvailableJobs.availableJobs
+    @GET("api/v1/jobs")
+    suspend fun getavailableJobs(   ) : AvailableJobData
 
 
 

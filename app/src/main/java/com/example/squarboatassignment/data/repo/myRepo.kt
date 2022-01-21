@@ -1,13 +1,24 @@
 package com.example.squarboatassignment.data.repo
 
 import androidx.lifecycle.LiveData
-import com.example.squarboatassignment.Api.CandidateApiService
+import androidx.lifecycle.MutableLiveData
+import com.example.squarboatassignment.Api.test.apiService
 import com.example.squarboatassignment.data.models.Candidate.AvailableJobs.AvailableJobData
-import com.example.squarboatassignment.data.models.Candidate.AvailableJobs.availableJobs
 
-class myRepo(private val candidateApiService : CandidateApiService) {
+class myRepo(private val api: apiService) {
 
-    suspend fun getApiResponse(): List<AvailableJobData> {
-        return candidateApiService.getavailableJobs().data
+    private val movieLiveData: MutableLiveData<AvailableJobData> = MutableLiveData()
+
+    fun getData(): LiveData<AvailableJobData> {
+        return movieLiveData
+    }
+
+
+    suspend fun getMovie() {
+        val result = api.getavailableJobs()
+        if (result != null) {
+            movieLiveData.postValue(result)
+        }
+
     }
 }

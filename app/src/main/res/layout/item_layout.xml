@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="47dp"
-        android:layout_marginTop="247dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="73dp" />
@@ -24,7 +24,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="207dp"
+
         android:text="TextView"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="149dp" />
@@ -36,7 +36,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="164dp"
+
         android:text="TextView"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="203dp" />
@@ -48,7 +48,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="131dp"
+
         android:text="TextView"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="272dp" />
@@ -60,20 +60,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="100dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="340dp" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="71dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="396dp" />
-</RelativeLayout>
+</LinearLayout>
