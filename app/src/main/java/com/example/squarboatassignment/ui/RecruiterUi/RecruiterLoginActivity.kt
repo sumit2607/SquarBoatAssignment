@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.squarboatassignment.R
 import com.example.squarboatassignment.data.models.Recruiter.Login.NewRecruiterLogin
 import com.example.squarboatassignment.ui.AllViewModel.RecruiterViewModel.RecruiterSignInViewModel
+import com.example.squarboatassignment.ui.CandidateUi.ForgetPassword
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.EtEmail
 import kotlinx.android.synthetic.main.activity_login.EtPassword
 import kotlinx.android.synthetic.main.activity_login.signInBtn
@@ -24,6 +26,11 @@ class RecruiterLoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recrutar_login)
+
+        forgetPasswordr.setOnClickListener{
+            val intent = Intent(this , RecruiterForgetPasswordActivity::class.java)
+            startActivity(intent)
+        }
 
         button5.setOnClickListener{
             val intent = Intent(this , PostJobActivity::class.java)
